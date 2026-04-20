@@ -19,59 +19,67 @@
   </div>
 
   {/* OVERLAY */}
-  <div className="absolute inset-0 bg-black/65"></div>
+  <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/70"></div>
 
   {/* SOFT LIGHT */}
-  <div className="absolute top-0 left-0 w-72 h-72 bg-white/10 blur-3xl rounded-full"></div>
-  <div className="absolute bottom-0 right-0 w-72 h-72 bg-green-400/10 blur-3xl rounded-full"></div>
+  <div className="absolute top-0 left-0 w-60 h-60 bg-white/10 blur-3xl rounded-full"></div>
+  <div className="absolute bottom-0 right-0 w-60 h-60 bg-green-400/10 blur-3xl rounded-full"></div>
 
   {/* CONTENT */}
-  <div className="relative z-10 py-24 px-5 text-center text-white max-w-3xl mx-auto">
+  <div className="relative z-10 py-16 md:py-20 px-4 text-center text-white max-w-2xl mx-auto">
+
+  <div className="rounded-3xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-[0_10px_40px_rgba(0,0,0,0.4)] px-5 py-6 md:px-8 md:py-8">
 
     {/* LABEL */}
-    <div className="inline-block mb-4 px-4 py-1 text-xs rounded-full bg-white/10 backdrop-blur border border-white/20 animate-float">
-      Ankara - Ender Perde
+    <div className="inline-block mb-3 px-4 py-1 text-xs md:text-sm rounded-full bg-white/20 backdrop-blur-md border border-white/30">
+      ✨ Ankara’nın Güvenilir Markası — Ender Perde
     </div>
 
-    {/* 🔥 ACİLİYET (YENİ - GÜÇLÜ) */}
-    <div className="mb-5 flex justify-center">
-      <div className="px-5 py-2 rounded-full bg-red-500 text-white text-xs md:text-sm font-semibold shadow-xl animate-pulse">
+    {/* ACİLİYET */}
+    <div className="mb-3 flex justify-center">
+      <div className="px-4 py-1.5 rounded-full bg-red-500 text-white text-xs md:text-sm font-semibold animate-pulse">
         🔥 Bugün ölçü alanlara %10 indirim
       </div>
     </div>
 
     {/* BAŞLIK */}
-    <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-4">
-      Ender Perde ile
-      <br />
-      <span className="text-zinc-200 inline-block animate-pulse">
-        Evinize Şıklık Katın
-      </span>
-    </h1>
+ <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight mb-3 text-white drop-shadow-[0_5px_25px_rgba(0,0,0,0.8)]">
+
+  {/* MARKA - BÜYÜK */}
+  <span className="block text-white text-3xl sm:text-4xl md:text-6xl lg:text-7xl mb-1">
+    Ender Perde
+  </span>
+
+  {/* SLOGAN - BİRAZ DAHA KÜÇÜK AMA GÜÇLÜ */}
+  <span className="block text-zinc-200 text-xl sm:text-2xl md:text-3xl font-semibold">
+    Evinize Şıklık Katın
+  </span>
+
+</h1>
 
     {/* SOSYAL KANIT */}
-    <div className="text-sm text-zinc-300 mb-3 animate-fadeIn">
+    <div className="text-xs md:text-sm text-zinc-300 mb-2">
       500+ mutlu müşteri • Ankara geneli hizmet
     </div>
 
     {/* AÇIKLAMA */}
-    <p className="text-sm md:text-lg text-zinc-200 mb-6">
-      Ölçüye özel üretim, profesyonel montaj ve hızlı teslimat ile yaşam alanlarınızı yenileyin.
+    <p className="text-sm md:text-base text-zinc-200 mb-4">
+      Ölçüye özel üretim, profesyonel montaj ve hızlı teslimat.
     </p>
 
     {/* BUTONLAR */}
-    <div className="flex flex-col md:flex-row gap-3 justify-center">
+    <div className="flex flex-col sm:flex-row gap-2 justify-center">
 
       <a
         href="https://wa.me/905424245216"
-        className="w-full md:w-auto bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-medium transition shadow-lg hover:shadow-green-300 animate-glow btn-press"
+        className="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white px-5 py-2.5 rounded-full text-sm font-medium transition"
       >
         WhatsApp’tan Yaz
       </a>
 
       <a
         href="#urunler"
-        className="w-full md:w-auto border border-white/30 hover:bg-white/10 px-6 py-3 rounded-full transition"
+        className="w-full sm:w-auto border border-white/30 hover:bg-white/10 px-5 py-2.5 rounded-full text-sm transition"
       >
         Ürünleri İncele
       </a>
@@ -79,22 +87,31 @@
     </div>
 
     {/* CANLI DURUM */}
-    <div className="mt-4 text-xs text-green-400">
-      🟢 Şu anda aktif • Ortalama 5 dk içinde dönüş
+    <div className="mt-3 text-xs text-green-400">
+      🟢 Aktif • Ortalama 5 dk
     </div>
 
     {/* ALT GÜVEN */}
-    <div className="mt-6 text-xs md:text-sm text-zinc-300">
-      ✔ Ücretsiz keşif • ✔ Özel ölçü • ✔ Kaliteli kumaş • ✔ Profesyonel montaj
+    <div className="mt-4 text-xs text-zinc-300">
+      ✔ Ücretsiz keşif • ✔ Özel ölçü • ✔ Profesyonel montaj
     </div>
 
-    {/* AKAN YAZI */}
-    <div className="mt-8 overflow-hidden whitespace-nowrap">
-      <div className="animate-[marquee_20s_linear_infinite] text-zinc-300 text-sm">
-        ✔ Aynı gün ölçü • ✔ Hızlı teslimat • ✔ Uygun fiyat • ✔ Modern tasarım • ✔ Ankara içi hizmet • ✔ Garantili işçilik
+    {/* KAYAN YAZI */}
+    <div className="mt-6 overflow-hidden">
+      <div className="flex w-max animate-[marquee_14s_linear_infinite] text-xs md:text-sm text-zinc-300 gap-6">
+        <span>✔ Aynı gün ölçü</span>
+        <span>✔ Hızlı teslimat</span>
+        <span>✔ Uygun fiyat</span>
+        <span>✔ Modern tasarım</span>
+        <span>✔ Ankara içi hizmet</span>
+        <span>✔ Garantili işçilik</span>
+
+        {/* tekrar */}
+        <span>✔ Aynı gün ölçü</span>
+        <span>✔ Hızlı teslimat</span>
       </div>
     </div>
-
+</div>
   </div>
 
 </section>
@@ -338,83 +355,84 @@
   </section>
 
         {/* HARİTA */}
-      <section className="bg-zinc-100 py-20 px-4">
+   <section className="bg-zinc-100 py-20 px-4">
 
-    {/* BAŞLIK */}
-    <div className="text-center mb-12">
-      <h2 className="text-2xl md:text-3xl font-semibold tracking-tight bg-gradient-to-r from-zinc-800 to-zinc-500 bg-clip-text text-transparent">
-        Konum & İletişim
-      </h2>
+  {/* BAŞLIK */}
+  <div className="text-center mb-12">
+    <h2 className="text-2xl md:text-3xl font-semibold tracking-tight bg-gradient-to-r from-zinc-800 to-zinc-500 bg-clip-text text-transparent">
+      Konum & İletişim
+    </h2>
 
-      <p className="text-zinc-600 text-sm md:text-base mt-3">
-        Mağazamızı ziyaret edin veya hemen iletişime geçin
-      </p>
+    <p className="text-zinc-600 text-sm md:text-base mt-3">
+      Mağazamızı ziyaret edin veya hemen iletişime geçin
+    </p>
+  </div>
+
+  {/* GRID */}
+  <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto items-center">
+
+    {/* HARİTA */}
+    <div className="rounded-2xl overflow-hidden shadow-md">
+      <iframe
+        src="https://maps.google.com/maps?q=39.8248411,32.7179489&z=17&output=embed"
+        className="w-full h-64 md:h-[400px] border-0"
+        loading="lazy"
+      ></iframe>
     </div>
 
-    {/* GRID YAPI */}
-    <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto items-center">
+    {/* KART */}
+    <div className="bg-white/80 backdrop-blur rounded-2xl p-6 md:p-8 shadow-md border border-zinc-200 text-left">
 
-      {/* HARİTA */}
-      <div className="rounded-2xl overflow-hidden shadow-md">
-        <iframe
-          src="https://www.google.com/maps?q=Ender+Perde+Dikmen+Cd+No:129+Ankara&output=embed"
-          className="w-full h-64 md:h-[400px] border-0"
-          loading="lazy"
-        ></iframe>
+      <h3 className="text-lg md:text-xl font-semibold mb-4 text-zinc-800">
+        Türkan Ev Yemekleri
+      </h3>
+
+      {/* ADRES */}
+      <div className="mb-4">
+        <p className="text-xs text-zinc-500 mb-1">Adres</p>
+        <p className="text-sm md:text-base text-zinc-700 leading-relaxed">
+          TEK Yapı Sitesi Zafer Cad. No:6/E
+          <br />
+          Gölbaşı / Ankara
+        </p>
       </div>
 
-      {/* İLETİŞİM KARTI */}
-      <div className="bg-white/80 backdrop-blur rounded-2xl p-6 md:p-8 shadow-md border border-zinc-200 text-left">
+      {/* TELEFON */}
+      <div className="mb-6">
+        <p className="text-xs text-zinc-500 mb-1">Telefon</p>
+        <p className="text-sm md:text-base font-medium text-zinc-800">
+          0501 103 85 83
+        </p>
+      </div>
 
-        {/* BAŞLIK */}
-        <h3 className="text-lg md:text-xl font-semibold mb-4 text-zinc-800">
-          Ender Perde
-        </h3>
+      {/* BUTONLAR */}
+      <div className="flex flex-col sm:flex-row gap-3">
 
-        {/* ADRES */}
-        <div className="mb-4">
-          <p className="text-xs text-zinc-500 mb-1">Adres</p>
-          <p className="text-sm md:text-base text-zinc-700 leading-relaxed">
-            İlkadım Mah. Dikmen Cd No:129 D:A  
-            <br />
-            Çankaya / Ankara
-          </p>
-        </div>
+        <a
+          href="https://wa.me/905011038583?text=Merhaba%20sipari%C5%9F%20vermek%20istiyorum"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 text-center bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-xl font-medium transition shadow"
+        >
+          WhatsApp’tan Yaz
+        </a>
 
-        {/* TELEFON */}
-        <div className="mb-6">
-          <p className="text-xs text-zinc-500 mb-1">Telefon</p>
-          <p className="text-sm md:text-base font-medium text-zinc-800">
-            0542 424 52 16
-          </p>
-        </div>
-
-        {/* BUTONLAR */}
-        <div className="flex flex-col sm:flex-row gap-3">
-
-          <a
-            href="https://wa.me/905424245216?text=Merhaba%20perde%20hakkında%20bilgi%20almak%20istiyorum"
-            className="flex-1 text-center bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-xl font-medium transition shadow"
-          >
-            WhatsApp’tan Yaz
-          </a>
-
-          <a
-            href="https://www.google.com/maps/search/?api=1&query=Ender+Perde+Dikmen+Cd+No:129+Ankara"
-            target="_blank"
-            className="flex-1 text-center border border-zinc-200 px-5 py-3 rounded-xl hover:bg-zinc-200 transition"
-          >
-            Yol Tarifi Al
-          </a>
-
-        </div>
+        <a
+          href="https://www.google.com/maps/dir/?api=1&destination=39.8248411,32.7179489"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 text-center border border-zinc-200 px-5 py-3 rounded-xl hover:bg-zinc-200 transition"
+        >
+          Yol Tarifi Al
+        </a>
 
       </div>
 
     </div>
 
-  </section>
+  </div>
 
+</section>
         {/* SABİT ALT BUTON (MOBİL SATIŞ MOTORU) */}
       {/* MOBİL ALT BAR */}
   <div className="fixed bottom-0 left-0 w-full md:hidden z-50">
