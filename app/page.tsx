@@ -98,7 +98,7 @@
 
     {/* KAYAN YAZI */}
     <div className="mt-6 overflow-hidden">
-      <div className="flex w-max animate-[marquee_14s_linear_infinite] text-xs md:text-sm text-zinc-300 gap-6">
+      <div className="flex w-max animate-[marquee_25s_linear_infinite] text-xs md:text-sm text-zinc-300 gap-6">
         <span>✔ Aynı gün ölçü</span>
         <span>✔ Hızlı teslimat</span>
         <span>✔ Uygun fiyat</span>
