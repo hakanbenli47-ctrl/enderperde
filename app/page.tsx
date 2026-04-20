@@ -384,7 +384,7 @@
     <div className="bg-white/80 backdrop-blur rounded-2xl p-6 md:p-8 shadow-md border border-zinc-200 text-left">
 
       <h3 className="text-lg md:text-xl font-semibold mb-4 text-zinc-800">
-        Türkan Ev Yemekleri
+       Ender Perde
       </h3>
 
       {/* ADRES */}
