@@ -164,4 +164,11 @@ body {
 .animate-float,
 .animate-glow {
   will-change: transform, opacity;
+}@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

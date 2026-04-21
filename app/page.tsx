@@ -52,32 +52,84 @@ export default function Home() {
 
     {/* SAĞ TARAF: GÖRSEL ALANI (RESİMLER ARTIK YAZIYI BOĞMAZ) */}
     <div className="order-1 lg:order-2 relative">
-      <div className="relative h-[350px] md:h-[500px] lg:h-[600px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white ring-1 ring-zinc-200">
+      <div className="relative h-[450px] md:h-[500px] lg:h-[400px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white ring-1 ring-zinc-200">
         <Image 
-          src="/WhatsApp Image 2026-04-21 at 09.21.04.jpeg" 
+          src="/2.jpg" 
           alt="Ender Perde Mağaza"
           fill
-          className="object-cover"
+          className="object-contain scale-120"
           priority
         />
       </div>
       
       {/* Dekoratif İkinci Görsel (Mağaza İçi - Sadece Mobilden Büyük Ekranlarda Görünür) */}
-      <div className="absolute -bottom-6 -left-6 w-32 h-32 md:w-48 md:h-48 rounded-3xl overflow-hidden border-4 md:border-8 border-white shadow-2xl hidden sm:block">
-         <Image 
-          src="/WhatsApp Image 2026-04-21 at 09.19.14.jpeg" 
-          alt="Ender Perde İç Mekan"
-          fill
-          className="object-cover"
-        />
-      </div>
+    
       
       {/* Tasarımı zenginleştiren arka plan süsü */}
       <div className="absolute -top-10 -right-10 w-32 h-32 bg-red-500/10 rounded-full blur-3xl"></div>
-    </div>
+    </div>  
   </div>
 </section>
+<section className="py-10 bg-white border-b border-zinc-200 overflow-hidden">
+  <div className="relative">
+    
+    <div className="flex gap-6 animate-[marquee_25s_linear_infinite] w-max px-6">
+      
+      {[
+        "/vip1.jpg",
+        "/vip2.jpg",
+        "/vip3.jpg",
+        "/vip4.jpg",
+        "/vip5.jpg",
+        "/vip6.jpg",
+      ].map((img, i) => (
+        
+        <div
+          key={i}
+          className="relative w-[220px] md:w-[260px] h-[140px] md:h-[160px] rounded-2xl overflow-hidden shadow-lg group"
+        >
+          
+          <Image
+            src={img}
+            alt="Perde Tasarım"
+            fill
+            className="object-cover group-hover:scale-110 transition duration-500"
+          />
 
+          {/* VIP overlay */}
+          <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition"></div>
+
+        </div>
+      ))}
+
+      {/* LOOP için kopya */}
+      {[
+        "/vip1.jpg",
+        "/vip2.jpg",
+        "/vip3.jpg",
+        "/vip4.jpg",
+        "/vip5.jpg",
+        "/vip6.jpg",
+      ].map((img, i) => (
+        
+        <div
+          key={"dup-" + i}
+          className="relative w-[220px] md:w-[260px] h-[140px] md:h-[160px] rounded-2xl overflow-hidden shadow-lg group"
+        >
+          <Image
+            src={img}
+            alt="Perde Tasarım"
+            fill
+            className="object-cover group-hover:scale-110 transition duration-500"
+          />
+          <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition"></div>
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+</section>
       {/* 3. FİYAT TABLOSU (KAMPANYA) */}
       <section id="kampanya" className="py-16 md:py-20 px-4 md:px-6 max-w-6xl mx-auto">
         <div className="text-center mb-10 md:mb-12">
@@ -237,14 +289,14 @@ export default function Home() {
             </div>
 
             {/* HARİTA */}
-            <div className="rounded-3xl overflow-hidden shadow-lg h-[400px] lg:h-full min-h-[400px] border border-zinc-200 bg-zinc-100 relative">
-               <iframe
-                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=G%C3%B6lba%C5%9F%C4%B1%20Ankara%20Ender%20Perde+(Ender%20Perde)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-                className="absolute inset-0 w-full h-full border-0"
-                loading="lazy"
-                title="Ender Perde Konum"
-              ></iframe>
-            </div>
+           <div className="rounded-3xl overflow-hidden shadow-lg h-[400px] lg:h-full min-h-[400px] border border-zinc-200 bg-zinc-100 relative">
+  <iframe
+    src="https://maps.google.com/maps?q=TEK%20Yap%C4%B1%20Sitesi%20Zafer%20Cad%20No%206E%20G%C3%B6lba%C5%9F%C4%B1%20Ankara&z=16&output=embed"
+    className="absolute inset-0 w-full h-full border-0"
+    loading="lazy"
+    title="TEK Yapı Sitesi Konum"
+  ></iframe>
+</div>
 
           </div>
         </div>
