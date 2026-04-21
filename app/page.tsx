@@ -58,9 +58,12 @@ const geri = (
       </div>
       
       <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-zinc-900 tracking-tighter leading-[0.9]">
-        ENDER <br/>
-        <span className="text-red-600">PERDE</span>
-      </h1>
+  <span className="text-lg md:text-2xl block tracking-wide text-zinc-500">
+    İNCEK
+  </span>
+  ENDER <br/>
+  <span className="text-red-600">PERDE</span>
+</h1>
       
       <p className="text-lg md:text-xl text-zinc-600 font-medium leading-relaxed max-w-xl mx-auto lg:mx-0">
        Yuvanizda Mutluluk ENDER PERDE ile başlar
@@ -405,7 +408,7 @@ const geri = (
                 <h3 className="text-xl md:text-2xl font-black text-red-600 mb-4 border-b border-zinc-200 pb-3">İNCEK ŞUBE</h3>
                 <div className="space-y-3 text-sm md:text-base text-zinc-700 mb-6">
                   <p className="flex items-center gap-2"><strong>📞 Sabit Hat:</strong> <a href="tel:03124601819" className="text-blue-600 font-medium">0312 460 18 19</a></p>
-                  <p className="flex items-center gap-2"><strong>📱 Cep/WP:</strong> <a href="tel:05370601800" className="text-blue-600 font-medium">0537 060 18 00</a></p>
+                  <p className="flex items-center gap-2"><strong>📱 Cep/WP:</strong> <a href="tel:05424245216" className="text-blue-600 font-medium">0 542 424 52 16</a></p>
                 </div>
                 <div className="flex gap-2">
                   <a href="tel:05424245216" className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2.5 rounded-lg text-sm font-bold transition">Ara</a>
@@ -415,18 +418,27 @@ const geri = (
               
               {/* Merkez Adres Bilgisi (Eski kodunuzdan) */}
               <div className="bg-white p-4 rounded-xl border border-zinc-200 text-sm text-zinc-600">
-                <strong>📍 Merkez Adres:</strong> TEK Yapı Sitesi Zafer Cad. No:6/E Gölbaşı / Ankara
+                <strong>📍 Merkez Adres:</strong> TEK Yapı Sitesi Zafer Cad. No:6/E İncek / Gölbaşı / Ankara
               </div>
             </div>
 
             {/* HARİTA */}
-           <div className="rounded-3xl overflow-hidden shadow-lg h-[400px] lg:h-full min-h-[400px] border border-zinc-200 bg-zinc-100 relative">
+         <div className="rounded-3xl overflow-hidden shadow-lg h-[400px] lg:h-full min-h-[400px] border border-zinc-200 bg-zinc-100 relative">
+
+  {/* HARİTA */}
   <iframe
-    src="https://maps.google.com/maps?q=TEK%20Yap%C4%B1%20Sitesi%20Zafer%20Cad%20No%206E%20G%C3%B6lba%C5%9F%C4%B1%20Ankara&z=16&output=embed"
+    src="https://www.google.com/maps?q=39.824858,32.714992&z=17&output=embed"
     className="absolute inset-0 w-full h-full border-0"
     loading="lazy"
-    title="TEK Yapı Sitesi Konum"
+    title="Ender Perde Konum"
   ></iframe>
+
+  {/* YAZI OVERLAY */}
+  <div className="absolute top-4 left-4 bg-black/70 text-white px-4 py-2 rounded-xl backdrop-blur-md">
+    <p className="text-sm font-semibold">Ender Perde</p>
+    <p className="text-xs text-zinc-300">İncek / Gölbaşı / Ankara</p>
+  </div>
+
 </div>
 
           </div>
@@ -435,7 +447,7 @@ const geri = (
 
       {/* FOOTER */}
       <footer className="bg-zinc-900 text-zinc-400 py-10 text-center text-xs md:text-sm px-4">
-        <p className="font-bold text-white mb-2">Ender Perde Mefruşat & Ev Tekstili - 1970'ten Bugüne.</p>
+        <p className="font-bold text-white mb-2">İncek Ender Perde Mefruşat & Ev Tekstili - 1970'ten Bugüne.</p>
         <p>Taç Yetkili Bayi - İncek & Dikmen, Ankara</p>
       </footer>
 
