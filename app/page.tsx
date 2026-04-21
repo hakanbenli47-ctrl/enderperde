@@ -216,21 +216,22 @@ const geri = (
       {/* 4. PERDE ÇEŞİTLERİMİZ (Eski Kodunuzdaki Görseller) */}
    <section
   id="urunler"
-  className="py-12 md:py-16 bg-zinc-100 px-3 md:px-4 max-w-6xl mx-auto rounded-3xl mb-16"
+  className="py-14 md:py-16 bg-zinc-100 px-3 md:px-4 max-w-6xl mx-auto rounded-3xl mb-16"
 >
 
   {/* BAŞLIK */}
-  <div className="text-center mb-8 md:mb-10">
-    <h2 className="text-xl md:text-3xl font-black text-zinc-900 mb-2">
+  <div className="text-center mb-10 md:mb-12">
+    <h2 className="text-2xl md:text-3xl font-black text-zinc-900 mb-2">
       Perde Çeşitlerimiz
     </h2>
-    <p className="text-zinc-500 text-xs md:text-base">
+    <p className="text-zinc-500 text-sm md:text-base">
       Her mekana uygun modern ve şık çözümler
     </p>
   </div>
 
   {/* GRID */}
-  <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
+  <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
+
 {[
   {
     images: tulImages,
@@ -276,48 +277,50 @@ const geri = (
   },
 ].map((item, i) => (
 
-      <div key={i} className="group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
+  <div key={i} className="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-2xl transition duration-300">
 
-        {/* RESİM */}
-        <div className="relative h-28 sm:h-32 md:h-48">
-          <Image
-            src={item.images[item.index]}
-            alt="Perde"
-            fill
-            className="object-cover"
-          />
-        </div>
+    {/* RESİM */}
+    <div className="relative h-36 sm:h-44 md:h-48">
+      <Image
+        src={item.images[item.index]}
+        alt="Perde"
+        fill
+        className="object-cover group-hover:scale-110 transition duration-500"
+      />
+    </div>
 
-        {/* SOL OK */}
-        <button
-          onClick={() => geri(item.index, item.set, item.images.length)}
-          className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 text-white w-8 h-8 rounded-full flex items-center justify-center z-10"
-        >
-          ‹
-        </button>
+    {/* SOL OK */}
+    <button
+      onClick={() => geri(item.index, item.set, item.images.length)}
+      className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/70 backdrop-blur-md text-white w-9 h-9 rounded-full flex items-center justify-center z-10 shadow-md"
+    >
+      ‹
+    </button>
 
-        {/* SAĞ OK */}
-        <button
-          onClick={() => ileri(item.index, item.set, item.images.length)}
-          className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 text-white w-8 h-8 rounded-full flex items-center justify-center z-10"
-        >
-          ›
-        </button>
+    {/* SAĞ OK */}
+    <button
+      onClick={() => ileri(item.index, item.set, item.images.length)}
+      className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/70 backdrop-blur-md text-white w-9 h-9 rounded-full flex items-center justify-center z-10 shadow-md"
+    >
+      ›
+    </button>
 
-        {/* YAZI */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-2 md:p-4">
-        <h3 className="text-white text-xs md:text-lg font-bold">
-  {item.title}
-</h3>
+    {/* OVERLAY */}
+    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-3 md:p-4">
 
-<p className="text-zinc-300 text-[10px] md:text-xs">
-  {item.desc}
-</p>
-        </div>
+      <h3 className="text-white text-sm md:text-lg font-bold leading-tight">
+        {item.title}
+      </h3>
 
-      </div>
+      <p className="text-zinc-300 text-[11px] md:text-xs mt-1">
+        {item.desc}
+      </p>
 
-    ))}
+    </div>
+
+  </div>
+
+))}
 
   </div>
 </section>
