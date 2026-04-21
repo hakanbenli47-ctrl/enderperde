@@ -109,12 +109,27 @@ const geri = (
     <div className="flex gap-6 animate-[marquee_25s_linear_infinite] w-max px-6">
       
       {[
-        "/vip1.jpg",
-        "/vip2.jpg",
-        "/vip3.jpg",
-        "/vip4.jpg",
-        "/vip5.jpg",
-        "/vip6.jpg",
+         "/perde1.jpg",
+        "/perde8.jpg",
+        "/perde4.jpg",
+        "/perde7.jpg",
+        "/perde11.jpg",
+        "/perde10.jpg",
+          "/perde12.jpg",
+        "/perde2.jpg",
+        "/perde9.jpg",
+        "/perde3.jpg",
+        "/perde5.jpg",
+        "/perde20.jpg",
+          "/perde6.jpg",
+        "/perde19.jpg",
+        "/perde13.jpg",
+        "/perde14.jpg",
+        "/perde15.jpg",
+        "/perde16.jpg",
+          "/perde17.jpg",
+        "/perde18.jpg",
+
       ].map((img, i) => (
         
         <div
