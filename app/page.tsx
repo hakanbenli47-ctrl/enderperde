@@ -1,6 +1,39 @@
+"use client"
+import { useState, useEffect } from "react"
 import Image from "next/image";
 
 export default function Home() {
+  // TÜM RESİMLER
+const tulImages = ["/perde1.jpg", "/perde2.jpg", "/perde3.jpg", "/perde4.jpg"]
+const fonImages = ["/perde5.jpg", "/perde6.jpg", "/perde7.jpg"]
+const zebraImages = ["/perde8.jpg", "/perde9.jpg", "/perde10.jpg","/perde11.jpg"]
+const storImages = ["/perde12.jpg", "/perde13.jpg", "/perde14.jpg"]
+const jaluziImages = ["/perde16.jpg", "/perde17.jpg"]
+const blackoutImages = ["/perde18.jpg", "/perde19.jpg", "/perde20.jpg"]
+
+// INDEXLER
+const [tulIndex, setTulIndex] = useState(0)
+const [fonIndex, setFonIndex] = useState(0)
+const [zebraIndex, setZebraIndex] = useState(0)
+const [storIndex, setStorIndex] = useState(0)
+const [jaluziIndex, setJaluziIndex] = useState(0)
+const [blackoutIndex, setBlackoutIndex] = useState(0)
+// GENEL FONKSİYON
+const ileri = (
+  index: number,
+  setIndex: React.Dispatch<React.SetStateAction<number>>,
+  length: number
+) => {
+  setIndex((prev: number) => (prev + 1) % length)
+}
+
+const geri = (
+  index: number,
+  setIndex: React.Dispatch<React.SetStateAction<number>>,
+  length: number
+) => {
+  setIndex((prev: number) => (prev - 1 + length) % length)
+}
   return (
     <div className="bg-zinc-50 text-zinc-900 font-sans min-h-screen selection:bg-red-500 selection:text-white pb-20 md:pb-0">
       
@@ -30,7 +63,7 @@ export default function Home() {
       </h1>
       
       <p className="text-lg md:text-xl text-zinc-600 font-medium leading-relaxed max-w-xl mx-auto lg:mx-0">
-        Ankara’nın köklü kuruluşu olarak; İncek ve Dikmen şubelerimizde evinizi sanat eserine dönüştürüyoruz. 
+       Yuvanizda Mutluluk ENDER PERDE ile başlar
         <span className="text-zinc-900 font-bold block mt-2 underline decoration-red-500/30">Ücretsiz keşif, hassas ölçü ve kusursuz montaj.</span>
       </p>
       
@@ -54,7 +87,7 @@ export default function Home() {
     <div className="order-1 lg:order-2 relative">
       <div className="relative h-[450px] md:h-[500px] lg:h-[400px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white ring-1 ring-zinc-200">
         <Image 
-          src="/2.jpg" 
+          src="/3.jpg" 
           alt="Ender Perde Mağaza"
           fill
           className="object-contain scale-120"
@@ -166,33 +199,113 @@ export default function Home() {
       </section>
 
       {/* 4. PERDE ÇEŞİTLERİMİZ (Eski Kodunuzdaki Görseller) */}
-      <section id="urunler" className="py-16 bg-zinc-100 px-4 max-w-6xl mx-auto rounded-3xl mb-16">
-        <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-3xl font-black text-zinc-900 mb-2">Perde Çeşitlerimiz</h2>
-          <p className="text-zinc-500 text-sm md:text-base">Her mekana uygun modern ve şık çözümler</p>
+   <section
+  id="urunler"
+  className="py-12 md:py-16 bg-zinc-100 px-3 md:px-4 max-w-6xl mx-auto rounded-3xl mb-16"
+>
+
+  {/* BAŞLIK */}
+  <div className="text-center mb-8 md:mb-10">
+    <h2 className="text-xl md:text-3xl font-black text-zinc-900 mb-2">
+      Perde Çeşitlerimiz
+    </h2>
+    <p className="text-zinc-500 text-xs md:text-base">
+      Her mekana uygun modern ve şık çözümler
+    </p>
+  </div>
+
+  {/* GRID */}
+  <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
+{[
+  {
+    images: tulImages,
+    index: tulIndex,
+    set: setTulIndex,
+    title: "Tül Perde",
+    desc: "Hafif • Şık • Modern görünüm",
+  },
+  {
+    images: fonImages,
+    index: fonIndex,
+    set: setFonIndex,
+    title: "Fon Perde",
+    desc: "Gösterişli • Kalın kumaş",
+  },
+  {
+    images: zebraImages,
+    index: zebraIndex,
+    set: setZebraIndex,
+    title: "Zebra Perde",
+    desc: "Işık kontrolü • Modern kullanım",
+  },
+  {
+    images: storImages,
+    index: storIndex,
+    set: setStorIndex,
+    title: "Stor Perde",
+    desc: "Minimal • Kullanışlı yapı",
+  },
+  {
+    images: jaluziImages,
+    index: jaluziIndex,
+    set: setJaluziIndex,
+    title: "Jaluzi Perde",
+    desc: "Ofis • Dayanıklı sistem",
+  },
+  {
+    images: blackoutImages,
+    index: blackoutIndex,
+    set: setBlackoutIndex,
+    title: "Blackout Perde",
+    desc: "Tam karartma • Konfor",
+  },
+].map((item, i) => (
+
+      <div key={i} className="group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
+
+        {/* RESİM */}
+        <div className="relative h-28 sm:h-32 md:h-48">
+          <Image
+            src={item.images[item.index]}
+            alt="Perde"
+            fill
+            className="object-cover"
+          />
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 px-2 md:px-0">
-          {[
-            { name: "Tül Perde", img: "/tul.jpg", desc: "Hafif • Şık • Modern" },
-            { name: "Fon Perde", img: "/fon.jpg", desc: "Gösterişli • Kalın" },
-            { name: "Zebra Perde", img: "/zebra.jpg", desc: "Pratik • Işık kontrolü" },
-            { name: "Stor Perde", img: "/stor.jpg", desc: "Minimal • Kullanışlı" },
-            { name: "Jaluzi Perde", img: "/jaluzi.jpg", desc: "Ofis • Dayanıklı" },
-            { name: "Blackout Perde", img: "/blackout.jpg", desc: "Tam karartma" },
-          ].map((item, i) => (
-            <div key={i} className="group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
-              <div className="relative h-32 md:h-48">
-                <Image src={item.img} alt={item.name} fill className="object-cover group-hover:scale-110 transition duration-500" />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-3 md:p-4">
-                <h3 className="text-white text-sm md:text-lg font-bold">{item.name}</h3>
-                <p className="text-zinc-300 text-[10px] md:text-xs">{item.desc}</p>
-              </div>
-            </div>
-          ))}
+        {/* SOL OK */}
+        <button
+          onClick={() => geri(item.index, item.set, item.images.length)}
+          className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 text-white w-8 h-8 rounded-full flex items-center justify-center z-10"
+        >
+          ‹
+        </button>
+
+        {/* SAĞ OK */}
+        <button
+          onClick={() => ileri(item.index, item.set, item.images.length)}
+          className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 text-white w-8 h-8 rounded-full flex items-center justify-center z-10"
+        >
+          ›
+        </button>
+
+        {/* YAZI */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-end p-2 md:p-4">
+        <h3 className="text-white text-xs md:text-lg font-bold">
+  {item.title}
+</h3>
+
+<p className="text-zinc-300 text-[10px] md:text-xs">
+  {item.desc}
+</p>
         </div>
-      </section>
+
+      </div>
+
+    ))}
+
+  </div>
+</section>
 
       {/* 5. ODALARA GÖRE ÇÖZÜMLER (Eski Kodunuz) */}
       <section className="py-16 px-4">
@@ -277,8 +390,8 @@ export default function Home() {
                   <p className="flex items-center gap-2"><strong>📱 Cep/WP:</strong> <a href="tel:05370601800" className="text-blue-600 font-medium">0537 060 18 00</a></p>
                 </div>
                 <div className="flex gap-2">
-                  <a href="tel:05370601800" className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2.5 rounded-lg text-sm font-bold transition">Ara</a>
-                  <a href="https://wa.me/905370601800" className="flex-1 bg-green-500 hover:bg-green-600 text-white text-center py-2.5 rounded-lg text-sm font-bold transition">WhatsApp</a>
+                  <a href="tel:05424245216" className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2.5 rounded-lg text-sm font-bold transition">Ara</a>
+                  <a href="https://wa.me/905424245216" className="flex-1 bg-green-500 hover:bg-green-600 text-white text-center py-2.5 rounded-lg text-sm font-bold transition">WhatsApp</a>
                 </div>
               </div>
               
