@@ -87,23 +87,53 @@ const geri = (
     </div>
 
     {/* SAĞ TARAF: GÖRSEL ALANI (RESİMLER ARTIK YAZIYI BOĞMAZ) */}
-    <div className="order-1 lg:order-2 relative">
-      <div className="relative h-[450px] md:h-[500px] lg:h-[400px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white ring-1 ring-zinc-200">
-        <Image 
-          src="/3.jpg" 
-          alt="Ender Perde Mağaza"
-          fill
-          className="object-contain scale-120"
-          priority
-        />
-      </div>
+  <section className="relative w-full min-h-[300px] md:min-h-[500px] lg:min-h-[400px] overflow-hidden bg-zinc-50">
+
+  {/* GÖRSEL ARKADA */}
+  <div className="absolute inset-0 z-0 flex justify-end">
+
+    <Image
+      src="/3.jpg"
+      alt="Ender Perde"
+      fill
+      className="
+        object-cover
+        object-right
+        w-[80%] md:w-[60%] lg:w-[50%]
+      "
+      priority
+    />
+
+    {/* SOL OKUNURLUK GRADIENT */}
+    <div className="
+      absolute inset-0 
+      bg-gradient-to-r 
+      from-white/0 
+via-white/0
+      to-transparent
+    " />
+
+  </div>
+
+  {/* CONTENT */}
+  <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 md:py-24 grid lg:grid-cols-2 gap-10 items-center">
+
+    {/* SOL YAZI */}
+    <div className="text-center lg:text-left space-y-6">
+
+      <h1 className="text-4xl md:text-6xl font-black leading-tight">
+         <span className="text-red-600"></span>
+      </h1>
+
+      <p className="text-zinc-600 text-base md:text-lg max-w-xl mx-auto lg:mx-0">
       
-      {/* Dekoratif İkinci Görsel (Mağaza İçi - Sadece Mobilden Büyük Ekranlarda Görünür) */}
-    
-      
-      {/* Tasarımı zenginleştiren arka plan süsü */}
-      <div className="absolute -top-10 -right-10 w-32 h-32 bg-red-500/10 rounded-full blur-3xl"></div>
-    </div>  
+      </p>
+
+    </div>
+
+  </div>
+
+</section>  
   </div>
 </section>
 <section className="py-10 bg-white border-b border-zinc-200 overflow-hidden">
