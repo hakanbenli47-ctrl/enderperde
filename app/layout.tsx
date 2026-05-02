@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://incekenderperde.com"),
 
   title: {
-    default: "İncek Ender Perde | Ankara Perde Hizmeti",
-    template: "%s | İncek Ender Perde",
+    default: "İncek de Perdeci | Ankara Perde Hizmeti",
+    template: "%s | İncek de Perdeci",
   },
 
   description:
