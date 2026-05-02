@@ -57,12 +57,22 @@ const geri = (
         </span>
       </div>
       
-      <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-zinc-900 tracking-tighter leading-[0.9]">
-  <span className="text-lg md:text-2xl block tracking-wide text-zinc-500">
-    İNCEK
+     <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-zinc-900 tracking-tighter leading-[0.9]">
+
+  {/* GOOGLE İÇİN */}
+  <span className="sr-only">
+    İncek Perdeci Ankara Perde Hizmeti
   </span>
-  ENDER <br/>
-  <span className="text-red-600">PERDE</span>
+
+  {/* KULLANICI İÇİN */}
+  <span aria-hidden="true">
+    <span className="text-lg md:text-2xl block tracking-wide text-zinc-500">
+      İNCEK
+    </span>
+    ENDER <br/>
+    <span className="text-red-600">PERDE</span>
+  </span>
+
 </h1>
       
       <p className="text-lg md:text-xl text-zinc-600 font-medium leading-relaxed max-w-xl mx-auto lg:mx-0">

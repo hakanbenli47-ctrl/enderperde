@@ -16,36 +16,36 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://incekenderperde.com"),
 
   title: {
-    default: "İncek de Perdeci | Ankara Perde Hizmeti",
-    template: "%s | İncek de Perdeci",
+    default: "İncek Perdeci | Ankara Perde Hizmeti",
+    template: "%s | İncek Perdeci",
   },
 
   description:
     "Ankara İncek bölgesinde stor perde, tül perde ve fon perde hizmeti. Ücretsiz keşif, ölçü ve montaj ile profesyonel çözümler.",
 
- keywords: [
-  "ankara perde",
-  "incek perde",
-  "incek perdeci",
-  "incek stor perde",
-  "stor perde ankara",
-  "tül perde ankara",
-  "fon perde modelleri",
-  "perde montaj",
-  "perde ölçü hizmeti",
-  "ankara perde firması",
-],
+  keywords: [
+    "ankara perde",
+    "incek perde",
+    "incek perdeci",
+    "incek stor perde",
+    "stor perde ankara",
+    "tül perde ankara",
+    "fon perde modelleri",
+    "perde montaj",
+    "perde ölçü hizmeti",
+    "ankara perde firması",
+  ],
 
   verification: {
     google: "J_jPf5zVpumVKDb3hm1q4PwXqgYCSUttOew7QkUUb3Y",
   },
 
   openGraph: {
-    title: "İncek Ender Perde",
+    title: "İncek Perdeci | Ankara Perde Hizmeti",
     description:
       "Ankara'da stor perde, tül perde ve fon perde çözümleri. Ücretsiz keşif ve montaj.",
     url: "https://incekenderperde.com",
-    siteName: "İncek Ender Perde",
+    siteName: "İncek Perdeci",
     locale: "tr_TR",
     type: "website",
   },
