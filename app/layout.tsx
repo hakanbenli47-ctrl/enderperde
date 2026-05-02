@@ -40,14 +40,32 @@ export const metadata: Metadata = {
     google: "J_jPf5zVpumVKDb3hm1q4PwXqgYCSUttOew7QkUUb3Y",
   },
 
+  // 🔥 GÜÇLENDİRİLDİ (GÖRSEL EKLENDİ)
   openGraph: {
     title: "İncek Perdeci | Ankara Perde Hizmeti",
     description:
       "Ankara'da stor perde, tül perde ve fon perde çözümleri. Ücretsiz keşif ve montaj.",
     url: "https://incekenderperde.com",
     siteName: "İncek Perdeci",
+    images: [
+      {
+        url: "https://incekenderperde.com/3.jpg",
+        width: 1200,
+        height: 630,
+        alt: "İncek perdeci Ankara perde hizmeti",
+      },
+    ],
     locale: "tr_TR",
     type: "website",
+  },
+
+  // 🔥 YENİ EKLENDİ (Google da kullanıyor)
+  twitter: {
+    card: "summary_large_image",
+    title: "İncek Perdeci | Ankara Perde Hizmeti",
+    description:
+      "Ankara İncek bölgesinde profesyonel perde çözümleri",
+    images: ["https://incekenderperde.com/3.jpg"],
   },
 
   alternates: {
